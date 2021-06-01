@@ -1,0 +1,759 @@
+Received: from 192.28.148.141 (unknown [192.28.148.141])
+	by newmx35.qq.com (NewMx) with SMTP id 
+	for <497555805@qq.com>; Thu, 20 May 2021 16:06:21 +0800
+X-QQ-FEAT: nHaaMjwLeTzrjOq7BplVCHzLx/8KokHTSAxMZF19+Iw=
+X-QQ-MAILINFO: MHG2h55yn1llqiFxgptuty3nqP9t2pP3cjwA4Gyp4YVwutGOG5eRt9AjM
+	qEIlTqYT7rCoEn8tLGUxAmsL8NV4yZ2l025oPD2FtY3aVIVvn361mDMSNGmVxbdXt06CBhK
+	yQ==
+X-QQ-mid: mxsza28t1621497980tukzk1mzd
+X-QQ-CSender: 929-FJL-178.0.88147.0.0.19520.9.106917903@mail.docker.com
+X-QQ-ORGSender: 929-FJL-178.0.88147.0.0.19520.9.106917903@mail.docker.com
+X-QQ-XMAILINFO: MkhAA4qIuU0p0CwGGYrJdiebf+bL464loG9vdtCtx6uSPRK6YTrtNc7PYmQ/pz
+	 RKKGJm7WGEA3DY07Wq63Pl3IXK5CFKX/wnyiojEgOfZVwb96Tm/hKnRkHGpW76AbZ3oP4zQVNnkb
+	 pHkXlHwHfEkMbvXH8sJRqHyVtDV1l0KWKwbLmAstX5UYccISFZ2I4pK8E+hbHpaSZNNNMLzeFDu9
+	 4dADfXRcz1lDnmUatwa4oGQ9WcV3hkBMhxjvTA/gGzN29VOJ1L/miE0t2BU+SaXn/yzt3QWBwkCr
+	 +s50oKYU7M/8ApJfxAFI9uzDZp4hsFL7JaXDMCjBu0x02HosipR17CaQkN4skYz3Ewl9zC9JGN/J
+	 fBM4NLo/styZUeXV0c+8LWInuR7lCnMfa47ig9QyY2l9ECrGi4Gu5LJN61oHo+0+VQrXeiUE3uX3
+	 7krk7dkqCimHpdAmdigtDuFQQUdQKhLWpHHDc1efFh3CIarDYFPjzpPy0RsvCVEdRIkT8iv6eoWX
+	 dkT/treyaw3+eiRsDBq5NM6hNhPeefIv31+rSuq6rzB+3VUrJ93gH0+n/nQE2JZlzGjXvkM9lGYK
+	 1kDYFJd2YBVYYb6M2apwIMGobI9MAVFoG1csXBwHUKijHs7BJx4LAXhdwkK8vDIR3RSYmmiajxgq
+	 Stl5u4PaOCxD+C5mgqPpaeNXPYhaCYZXkNsA2H/kfR2wGIkHxFezY6F+/LeLC26oBHR5rTEnPgvj
+	 BTE07ioxHHXDH8nepyjCS1BIexGaDrgPhyQSJFDHyEI9/a9uVrmexTiQYgLfQJkLsW89LDFRnpAu
+	 IWh37bfkEuU+PQkZbtqNDIF/xqa3i8EWHz/HLjPn/eM9Ql8ArK/d1TsonpsdQxFbuZPfPvPAB9h+
+	 xojqXJcDM3T9EWj+oZRF31qBRG5Hcif2UZqbCfBcI7nh8yPNM58g1WrqrUb7Iq0Vt9A4qs31GrWY
+	 DeqhnMDmqbR/xnWsiXicjlqRnAe+KcANMxkwXvDDKfC1qBYksN0JT2QL/xG5PdPj/IwoTt1vHEO6
+	 QJF9X8YbChqzbteyln
+X-MSFBL: USmukw2gx3kdlvv5Ut5DqQWc4L6LfaVZQO0LRj91mb0=|eyJiIjoiZHZwLTE5Mi0
+	yOC0xNDgtMTQxIiwiZyI6ImJnLXNqZC00NTQiLCJ1IjoiOTI5LUZKTC0xNzg6MDo
+	xNTYzMDo5NjY4OTo2NjE1Mjk6MTk1MjA6OTo4ODE0NzoxMDY5MTc5MDMiLCJyIjo
+	iNDk3NTU1ODA1QHFxLmNvbSJ9
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1621423243;
+	s=m1; d=docker.com; i=@docker.com;
+	h=Content-Type:MIME-Version:Subject:To:From:Date;
+	bh=XBp5WpnHAGhaDE8Vf8qTFwHSR2qhnQOc12M71ydcNeU=;
+	b=WFGknv5UVW0DoVlqG673p+Gm/8/sQuUpcLlD/w6pCbWw3yGITTHABI3A95SjvNVG
+	nvzM3gLUMtch0DdVkSwhuyfc/YTZ4heu5mowASPyPn11ixZO54ccvJOYI+wY4MpwmsE
+	MtM6BlPonDFf2Ba070EIF0SIazN90+FeVe2usJuY=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1621423243;
+	s=m1; d=mktdns.com; i=@mktdns.com;
+	h=Content-Type:MIME-Version:Subject:To:From:Date;
+	bh=XBp5WpnHAGhaDE8Vf8qTFwHSR2qhnQOc12M71ydcNeU=;
+	b=XW6DTUucz0Dk3Q1WZ4U3HvBurfx/7WiY+htZPX7M8vI5ONXkb5uSyDKVfPfVujZN
+	p7OHboq1bz07Nsz64qoAl7ZHt404FMDvA9S7CxyiiiLChSE1c7P2lZJDHVdE9vJ3EBS
+	yenx5EC0r1hBacWUVZxUs0/WNwRKVTcMOMwhK9N4=
+Date: Wed, 19 May 2021 06:20:43 -0500 (CDT)
+From: DockerCon LIVE 2021 <no-reply@docker.com>
+Reply-To: no-reply@docker.com
+To: 497555805@qq.com
+Message-ID: <1006371062.112576561.1621423243789@sjmktmail-batch1n.marketo.org>
+Subject: Sessions you don't want to miss
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_112576558_21546035.1621423243789"
+X-Binding: bg-sjd-454
+List-Unsubscribe: <mailto:NNZWKULLNM3EY6SHKF4VO4JTNBBS24LRIJ5HOYZTGBWE6OCBKVLDCMKRIZRGUTSJONGWOPI=.88147.19520.9@unsub-sj.mktomail.com>
+X-PVIQ: mkto-929FJL178-000001-000000-088147
+X-MarketoID: 929-FJL-178:0:15630:96689:661529:19520:9:88147:106917903
+X-Mailfrom: 929-FJL-178.0.88147.0.0.19520.9.106917903@mail.docker.com
+X-MktArchive: false
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+
+------=_Part_112576558_21546035.1621423243789
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+View Online <[[https://goto.docker.com/index.php/email/emailWebview?mkt_tok=
+=3DOTI5LUZKTC0xNzgAAAF9I1PyCZfmO3R5OH6HS51vK7jPJ__loxTtPFLnQ6MQz6vZUPd5zrpq=
+X0e_KIVNBXzcKjFCQxxLydGlMV70jDtVA3g_PGCrmG8sewgTIlNX-5YUY28&md_id=3D19520]]=
+>
+Whether you're new to Docker or a bonafide expert, DockerCon LIVE <https://=
+email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCahBpMFu_pfY8RnVY9EkLm_UnWYp20zwt3=
+KuVl6c2M8UNEDKlIiZp8e363Us6KwwhGk=3D>=C2=A0has something for everyone. Chec=
+k out these sessions from experts at Docker, Docker Captains, the expansive=
+ Docker ecosystem, and users like you.
+Register Now <https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCahBpMFu_pfY=
+8RnVY9EkLm_UnWYp20zwt3KuVl6c2M8UNEDKlIiZp8e363Us6KwwhGk=3D>
+Docker, Docker, Docker Sessions:
+Beyond the UI: Hands-on Coding with Docker's New HTTP APIs <https://email.d=
+ocker.com/OTI5LUZKTC0xNzgAAAF9I1PyCcG4acvRCzg5GeRT-e84mtC2gHubQmbtTcPYVaGgr=
+LN5r4UOx6hxqEfGjn09wuEoi_U=3D> - Mark Higson, Docker
+I have an M1 Mac, Now What? Docker in a Multi-arch World <https://email.doc=
+ker.com/OTI5LUZKTC0xNzgAAAF9I1PyCfVh5sPS3fZ85LZL9mHo5yd0CtaMkkBBo2AZpddsLJR=
+3irwZ5h6x8k8snagn48SSh5s=3D> - Tonis Tiigi, Docker
+From Fig to the Docker CLI: What=E2=80=99s New With Compose? <https://email=
+.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCSEU6TS3hVw7P8ciNUYWJvOwO8qbiyyr_g_8N5p=
+galrQNO4y5m9PHCrdcf_WZSBsI70=3D> - Nicolas de Loof, Docker
+Docker Dev Environments: a New Way to Collaborate Without Git Conflicts <ht=
+tps://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCfSxFDPehL_KEcBsfZbxKEPp9Tkk=
+JpGd-Ejx5m-HKXgxeJszNAwp3XpoiIvp1oEfiG8=3D> - Ben De St Paer-Gotch, Djordje=
+ Lukic and Guillaume=20
+Lours,=C2=A0Docker
+
+Docker Community &=C2=A0Ecosystem Sessions:
+How Much Kubernetes Do I Need to Learn? <https://email.docker.com/OTI5LUZKT=
+C0xNzgAAAF9I1PyCbrsYbACrZ58HnJepwA_rbNTJbDyuhFwrhqq3KnLLK4PntXWZMAqOSN6bMmX=
+UMUF1pg=3D> -=20
+Elton Stoneman, Docker Captain
+My Container Image Has 500 Vulnerabilities, Now What? <https://email.docker=
+.com/OTI5LUZKTC0xNzgAAAF9I1PyCT1JO2kVm30oOnMCCw7dWs0oqZ_s9guARm6VUPZtZZkOSq=
+Wuu_pxadbJGK4qqPjUVW4=3D> - Matt Jarvis, Snyk
+Lessons Learned Deploying Application on AWS Using the New Docker Compose C=
+LI Integration <https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCXeJyKc9Xp=
+m2krEcLNy01bw-_CPHjIJcQEMTFafcKgytdDdl9Y43aG67LvBHh4Tu2wA=3D> - Massimo Re =
+Ferr=C3=A8, AWS and Dexter=20
+Legaspi, SiriusXM-Pandora
+Optimizing Docker Builds: Successes, Failures, and Instrumented Observabili=
+ty <https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCadNOepvNdYTypVT1W7AvT=
+nbZLJA5NN8ORj2ilfAbvORZ0tyc_YGQlQdUAnn5WMZ6z4=3D> - Nicole Rifkin,=20
+Simply Business
+Register Now <https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCahBpMFu_pfY=
+8RnVY9EkLm_UnWYp20zwt3KuVl6c2M8UNEDKlIiZp8e363Us6KwwhGk=3D>
+Can=E2=80=99t attend live? No problem =E2=80=94 you can watch recordings af=
+ter the event at your own pace. But first you have to register <https://ema=
+il.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCahBpMFu_pfY8RnVY9EkLm_UnWYp20zwt3KuV=
+l6c2M8UNEDKlIiZp8e363Us6KwwhGk=3D>.
+=C2=A9 2020 Docker Inc. | Privacy Policy <https://email.docker.com/OTI5LUZK=
+TC0xNzgAAAF9I1PyCXipXYI4QtTz30fkPH2crca9s-OdbScW9DJdmlxx94eD6lxzb63558PRFJr=
+bSUUkr_U=3D>
+This email was sent to 497555805@qq.com, you may change message preferences=
+ or unsubscribe <[[https://goto.docker.com/UnsubscribePage.html?mkt_unsubsc=
+ribe=3D1&mkt_tok=3DOTI5LUZKTC0xNzgAAAF9I1PyCZfmO3R5OH6HS51vK7jPJ__loxTtPFLn=
+Q6MQz6vZUPd5zrpqX0e_KIVNBXzcKjFCQxxLydGlMV70jDtVA3g_PGCrmG8sewgTIlNX-5YUY28=
+]]> at any time.
+
+------=_Part_112576558_21546035.1621423243789
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html>
+<html xmlns=3D"=E2=80=9Chttp://www.w3.org/1999/xhtml=E2=80=9D" xmlns:v=3D"=
+=E2=80=9Curn:schemas-microsoft-com:vml=E2=80=9D" xmlns:o=3D"=E2=80=9Curn:sc=
+hemas-microsoft-com:office:office=E2=80=9D">
+<head>=20
+<meta charset=3D"utf-8">=20
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">=20
+<!--[if gte mso 9]><xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml><![endif]-->=20
+<!--Variables-->                                   =20
+<title></title>=20
+<style>
+      /* CLIENT-SPECIFIC STYLES */
+      img{-ms-interpolation-mode: bicubic;}=20
+      /* Force IE to smoothly render resized images. */
+      #outlook a{padding:0;}=20
+      /* Force Outlook 2007 and up to provide a "view in browser" message. =
+*/
+      table{mso-table-lspace:0pt;mso-table-rspace:0pt;}=20
+      /* Remove spacing between tables in Outlook 2007 and up. */
+      .ReadMsgBody{width:100%;}=20
+      .ExternalClass{width:100%;}=20
+      /* Force Outlook.com to display emails at full width. */
+      p, a, li, td, blockquote{mso-line-height-rule:exactly;}=20
+      /* Force Outlook to render line heights as they're originally set. */
+      a[href^=3D"tel"], a[href^=3D"sms"]{color:inherit;cursor:default; text=
+-decoration:none;}=20
+      /* Force mobile devices to inherit declared link styles. */
+      p, a, li, td, body, table, blockquote{-ms-text-size-adjust:100%;-webk=
+it-text-size-adjust:100%;}=20
+      /* Prevent Windows- and Webkit-based mobile platforms from changing d=
+eclared text sizes. */
+      .ExternalClass, .ExternalClass p, .ExternalClass td, .ExternalClass d=
+iv, .ExternalClass span, .ExternalClass font{line-height:100%;}
+      /* Force Outlook.com to display line heights normally. */
+      table{border-collapse:collapse;}
+
+      html {
+        -webkit-text-size-adjust: none;
+      }
+
+      #gmailModule,
+      .mobileOnly{ display:none !important; }
+      /*Hide Full-Width Image on Desktop*/
+
+      a, a:hover{=20
+        color: #2496ed;
+        text-decoration:underline;=20
+      }
+
+      .button a,=20
+      .button a:hover{=20
+        color:#ffffff;=20
+        background-color:#E25333;
+      }
+
+      span.calendar a{
+        color:#FFFFFF;
+        text-decoration:none;
+      }
+
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+      li{
+        color: #0087c7;
+      }
+
+      @media only screen and (max-width:600px){
+        #bodyTable{=20
+          width:100% !important;
+        }
+
+        img{
+          width:auto !important;
+          max-width:100% !important;
+          height:auto !important;
+        }
+        .logoContain img{
+          max-width:215px !important;
+        }
+        .tableStack{ width:100% !important; }
+        table.buttonStack { margin-top: 10px !important; }
+        td.buttonStack { padding-top: 16px !important; }
+
+        .stack{
+          padding-top: 15px !important;
+          padding-right:5% !important;
+          padding-bottom: 15px !important;
+          padding-left:5% !important;
+          width:90% !important;
+        }
+        td.mobileTopPad{ padding-top: 30px !important; }
+        table.mobileTopPad{ margin-top: 30px !important; }
+
+        td.insideTopPad{ padding-top: 15px !important; }
+        table.insideTopPad{ margin-top: 15px !important; }
+
+        table.button{=20
+          width:100% !important;=20
+          display:table !important;
+        }
+
+        .desktopPad,
+        #gmailModule{
+          display:none !important;
+        }
+        .center img{
+          margin-left:auto !important;
+          margin-right:auto !important;
+        }
+        .center table{
+          margin-right:auto;
+          margin-left:auto;
+        }
+        .center{=20
+          text-align:center !important;
+        }
+        .noPad{
+          padding-top:0px !important;
+          padding-right:0px !important;
+          padding-bottom:0px !important;
+          padding-left:0px !important;
+        }
+        .noSidePad{
+          padding-right:0px !important;
+          padding-left:0px !important;
+        }
+        hr{
+          margin-right:auto !important;
+          margin-left:auto !important;
+        }
+        .mobileOnly{ display:block !important; }
+      }
+    </style>=20
+<!--[if gte mso 9]>
+<style type=3D"text/css">
+td, p, ul, ol, li {=20
+font-family:Arial, sans-serif !important;=20
+}
+ul, ol {
+margin: 0px 0px 0px 26px !important;
+padding: 0px !important;
+list-style-position: inside !important;
+}
+table.outlookPadColumn{
+width:34% !important;
+padding-right:2% !important;
+}
+td.outlookFloat{margin-left:25px;padding-right:0px !important;}
+</style>
+<![endif]-->=20
+</head>=20
+<body bgcolor=3D"#e9ebee" style=3D"background:#e9ebee;mso-padding-alt: 0px =
+0px 0px 0px;"><style type=3D"text/css">div#emailPreHeader{ display: none !i=
+mportant; }</style><div id=3D"emailPreHeader" style=3D"mso-hide:all; visibi=
+lity:hidden; opacity:0; color:transparent; mso-line-height-rule:exactly; li=
+ne-height:0; font-size:0px; overflow:hidden; border-width:0; display:none !=
+important;">DockerCon LIVE 2021 is almost here and this year=E2=80=99s even=
+t will be jam-packed with 45+ breakout sessions, compelling keynotes and sp=
+onsors, interactive community rooms, live panels and interviews, and much m=
+ore.</div>=20
+<table role=3D"presentation" width=3D"100%" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0" style=3D"background:#e9ebee;mso-padding-alt: 0px 0px 0px =
+0px;">=20
+<tbody>
+<tr>=20
+<td>=20
+<!--Body Table-->=20
+<table role=3D"presentation" id=3D"bodyTable" width=3D"600" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" align=3D"center" style=3D"margin-left:aut=
+o;margin-right:auto;">=20
+<!--Preheader Container-->=20
+<tbody>
+<tr class=3D"desktopPad">=20
+<td style=3D"white-space:normal;color: #777777;font-family: Arial, Helvetic=
+a, sans-serf; font-size:11px; text-align:right;padding-top:7px;padding-bott=
+om:7px;">=20
+<div class=3D"mktoText" id=3D"preheader">
+<a href=3D"https://goto.docker.com/index.php/email/emailWebview?mkt_tok=3DO=
+TI5LUZKTC0xNzgAAAF9I1PyCZfmO3R5OH6HS51vK7jPJ__loxTtPFLnQ6MQz6vZUPd5zrpqX0e_=
+KIVNBXzcKjFCQxxLydGlMV70jDtVA3g_PGCrmG8sewgTIlNX-5YUY28&md_id=3D19520" styl=
+e=3D"color: #777777; text-decoration: underline;">View Online</a>
+</div> </td>=20
+</tr>=20
+<!--/Preheader Container-->=20
+<tr>=20
+<td>=20
+<table role=3D"presentation" id=3D"container" class=3D"mktoContainer" width=
+=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border-=
+collapse:collapse;">
+<tr class=3D"mktoModule" id=3D"fullWidthImage189e3f9a-6600-4d7e-a942-65f99c=
+8e3397">=20
+<td>=20
+<table role=3D"presentation" width=3D"100%" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" style=3D"min-width:100%;">=20
+<!--[if gte mso 9]>
+<tr>
+<td>
+<table role=3D"presentation" width=3D"600" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"width:600px;">
+<![endif]-->=20
+<tbody>=20
+<tr style=3D"white-space:nowrap;">=20
+<td style=3D"white-space:normal;">=20
+<div class=3D"mktoImg" id=3D"fullWidthImage02189e3f9a-6600-4d7e-a942-65f99c=
+8e3397" mktolockimgsize=3D"true">=20
+<a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCXwS1OTRB6g8YBqkSlb9FhYJj=
+7zGaUNZRzaRrtrfVYyf9pnO0V1dKU1whCZc3ujP45o=3D" target=3D"_blank"
+><img src=3D"https://goto.docker.com/rs/929-FJL-178/images/dockercon21-Emai=
+l banners-03 (2).png" width=3D"600" style=3D"display:block"></a>=20
+</div> </td>=20
+</tr>=20
+<!--[if gte mso 9]>
+</table>
+</td>
+</tr>
+<![endif]-->=20
+</tbody>=20
+</table> </td>=20
+</tr>
+<tr class=3D"mktoModule" id=3D"textOnly">=20
+<td>=20
+<table role=3D"presentation" width=3D"100%" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" style=3D"min-width:100%;">=20
+<!--[if gte mso 9]>
+<tr>
+<td>
+<table role=3D"presentation" width=3D"600" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"width:600px;">
+<![endif]-->=20
+<tbody>=20
+<tr style=3D"white-space:nowrap; background-color:#ffffff;">=20
+<td class=3D"stack" style=3D"color:#8f9daa; text-align:left; font-family: A=
+rial, Helvetica, sans-serf; font-size:16px; line-height: 24px;white-space:n=
+ormal; background-color:#ffffff;padding-top:20px;padding-right: 25px;paddin=
+g-bottom:15px;padding-left: 25px;">=20
+<div class=3D"mktoText" id=3D"plainText05">
+ Whether you're new to Docker or a bonafide expert,=20
+<strong><a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCXwS1OTRB6g8YBqkSlb9FhYJj=
+7zGaUNZRzaRrtrfVYyf9pnO0V1dKU1whCZc3ujP45o=3D" target=3D"_blank" id=3D""
+>DockerCon LIVE</a></strong>&nbsp;has something for everyone. Check out the=
+se sessions from experts at Docker, Docker Captains, the expansive Docker e=
+cosystem, and users like you.=20
+</div> </td>=20
+</tr>=20
+<!--[if gte mso 9]>
+</table>
+</td>
+</tr>
+<![endif]-->=20
+</tbody>=20
+</table> </td>=20
+</tr>
+<tr class=3D"mktoModule" id=3D"primaryButton179dd164-e00f-4505-abca-df1df39=
+af444">=20
+<td>=20
+<table role=3D"presentation" width=3D"100%" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" style=3D"min-width:100%;">=20
+<!--[if gte mso 9]>
+<tr>
+<td>
+<table role=3D"presentation" width=3D"600" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"width:600px;">
+<![endif]-->=20
+<tbody>=20
+<tr style=3D"white-space:nowrap; background-color:#ffffff">=20
+<td class=3D"stack" style=3D"white-space:normal;background-color:#ffffff;te=
+xt-align:center;padding-top:5px;padding-right: 25px;padding-bottom:0px;padd=
+ing-left: 25px;">=20
+<!--Button-->=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" bgcolor=3D"#FF3366" style=3D"display:inline-block;border-radius:5px;">=
+=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-weight:bold; font-family: Arial, Helvetica, sans-serf; fo=
+nt-size:16px; line-height:24px; color:#ffffff; padding: 10px 40px; text-ali=
+gn:center; ">=20
+<div class=3D"mktoText" id=3D"buttonText06179dd164-e00f-4505-abca-df1df39af=
+444">=20
+<a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCXwS1OTRB6g8YBqkSlb9FhYJj=
+7zGaUNZRzaRrtrfVYyf9pnO0V1dKU1whCZc3ujP45o=3D" style=3D"text-decoration: no=
+ne; color: #ffffff;" target=3D"_blank"
+>Register Now</a>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<!--/Button--> </td>=20
+</tr>=20
+<!--[if gte mso 9]>
+</table>
+</td>
+</tr>
+<![endif]-->=20
+</tbody>=20
+</table> </td>=20
+</tr>
+<tr class=3D"mktoModule" id=3D"textOnly064983e7-af46-4633-957f-fa087fec6cf8=
+">=20
+<td>=20
+<table role=3D"presentation" width=3D"100%" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" style=3D"min-width:100%;">=20
+<!--[if gte mso 9]>
+<tr>
+<td>
+<table role=3D"presentation" width=3D"600" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"width:600px;">
+<![endif]-->=20
+<tbody>=20
+<tr style=3D"white-space:nowrap; background-color:#ffffff;">=20
+<td class=3D"stack" style=3D"color:#8f9daa; text-align:left; font-family: A=
+rial, Helvetica, sans-serf; font-size:16px; line-height: 24px;white-space:n=
+ormal; background-color:#ffffff;padding-top:10px;padding-right: 25px;paddin=
+g-bottom:15px;padding-left: 25px;">=20
+<div class=3D"mktoText" id=3D"plainText05064983e7-af46-4633-957f-fa087fec6c=
+f8">=20
+<strong>Docker, Docker, Docker Sessions:</strong>=20
+<br>=20
+<span style=3D"font-size: 14px;"><a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCaw9jLkPMjyG3X7YeoTxWD-6K=
+PxnFi0mjK-bk4FzoNHF5ahdDNJoR8E-Q7gq-nE9e6o=3D" target=3D"_blank" id=3D""
+>Beyond the UI: Hands-on Coding with Docker's New HTTP APIs</a> - <strong>M=
+ark Higson</strong>, Docker</span>=20
+<br>=20
+<span style=3D"font-size: 14px;"><a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCZzqvuzOEsMf9UCSjG27w0iz7=
+1CRoc4s-NTfJaOA5p65fX3dYPeSGix_3R3gyXCtk5w=3D" target=3D"_blank" id=3D""
+>I have an M1 Mac, Now What? Docker in a Multi-arch World</a> - <strong>Ton=
+is Tiigi</strong>, Docker</span>=20
+<br>=20
+<span style=3D"font-size: 14px;"><a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCUZsSfMlTTncy1h7CDLjHZP2X=
+H5TOso9Dx7DarltHp6qL4rU4DllySKSjPVyxO34C1o=3D" target=3D"_blank" id=3D""
+>From Fig to the Docker CLI: What=E2=80=99s New With Compose?</a> - <strong=
+>Nicolas de Loof</strong>, Docker</span>=20
+<br>=20
+<span style=3D"font-size: 14px;"><a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCcyVBmz4eIid7G4COR4ZdBTWA=
+9kVNIUzB4DPGMF6-mzqweRR92wNmqjZGEZYdcL3c3M=3D" target=3D"_blank" id=3D""
+>Docker Dev Environments: a New Way to Collaborate Without Git Conflicts</a=
+> - <strong>Ben De St Paer-Gotch</strong>, <strong>Djordje Lukic</strong> a=
+nd <strong>Guillaume Lours</strong>,&nbsp;Docker</span>=20
+<br>=20
+<br>=20
+<strong>Docker Community &amp;&nbsp;Ecosystem Sessions:<br></strong>=20
+<span style=3D"font-size: 14px;"><a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCR75l66j9b3yOZs7SRPiG7lg6=
+cYY1PR5bVJIcQPiax2oUlmvY3vNoeiKjwIhollPTXs=3D" target=3D"_blank" id=3D""
+>How Much Kubernetes Do I Need to Learn?</a> - <strong>Elton Stoneman</stro=
+ng>, Docker Captain</span>=20
+<br>=20
+<span style=3D"font-size: 14px;"><a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCXZUxg9RhISk8m9fzqDRiLN2u=
+uzwzdrMorx2N7Yeu1AsWxDgnNfcDy7svtLYwYNHPzc=3D" target=3D"_blank" id=3D""
+>My Container Image Has 500 Vulnerabilities, Now What?</a> - <strong>Matt J=
+arvis</strong>, Snyk</span>=20
+<br>=20
+<span style=3D"font-size: 14px;"><a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCcEX9q4gYXhGOnpbPi_yEjx9B=
+lScGv9ahff67__mY61VAnD66VNbgv2oeWNJXN8xTKU=3D" target=3D"_blank" id=3D""
+>Lessons Learned Deploying Application on AWS Using the New Docker Compose =
+CLI Integration</a> - <strong>Massimo Re Ferr=C3=A8</strong>, AWS and <stro=
+ng>Dexter Legaspi</strong>, SiriusXM-Pandora</span>=20
+<br>=20
+<span style=3D"font-size: 14px;"><a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCTvNUFdsDOVlgcC1NrMim0-Hz=
+QzTW923PzbKgv2n-EUt1Us6oyStztslpiiXlgZmccw=3D" target=3D"_blank" id=3D""
+>Optimizing Docker Builds: Successes, Failures, and Instrumented Observabil=
+ity</a> - <strong>Nicole Rifkin</strong>, Simply Business</span>=20
+<br>=20
+</div> </td>=20
+</tr>=20
+<!--[if gte mso 9]>
+</table>
+</td>
+</tr>
+<![endif]-->=20
+</tbody>=20
+</table> </td>=20
+</tr>
+<tr class=3D"mktoModule" id=3D"primaryButton179dd164-e00f-4505-abca-df1df39=
+af4441f9fc1ab-41c9-45f0-89ef-2d1555da190c">=20
+<td>=20
+<table role=3D"presentation" width=3D"100%" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" style=3D"min-width:100%;">=20
+<!--[if gte mso 9]>
+<tr>
+<td>
+<table role=3D"presentation" width=3D"600" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"width:600px;">
+<![endif]-->=20
+<tbody>=20
+<tr style=3D"white-space:nowrap; background-color:#ffffff">=20
+<td class=3D"stack" style=3D"white-space:normal;background-color:#ffffff;te=
+xt-align:center;padding-top:5px;padding-right: 25px;padding-bottom:0px;padd=
+ing-left: 25px;">=20
+<!--Button-->=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" bgcolor=3D"#FF3366" style=3D"display:inline-block;border-radius:5px;">=
+=20
+<tbody>=20
+<tr>=20
+<td style=3D"font-weight:bold; font-family: Arial, Helvetica, sans-serf; fo=
+nt-size:16px; line-height:24px; color:#ffffff; padding: 10px 40px; text-ali=
+gn:center; ">=20
+<div class=3D"mktoText" id=3D"buttonText06179dd164-e00f-4505-abca-df1df39af=
+4441f9fc1ab-41c9-45f0-89ef-2d1555da190c">=20
+<a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCXwS1OTRB6g8YBqkSlb9FhYJj=
+7zGaUNZRzaRrtrfVYyf9pnO0V1dKU1whCZc3ujP45o=3D" style=3D"text-decoration: no=
+ne; color: #ffffff;" target=3D"_blank"
+>Register Now</a>=20
+</div> </td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<!--/Button--> </td>=20
+</tr>=20
+<!--[if gte mso 9]>
+</table>
+</td>
+</tr>
+<![endif]-->=20
+</tbody>=20
+</table> </td>=20
+</tr>
+<tr class=3D"mktoModule" id=3D"textOnly90d2c478-e532-49fa-a40f-b0237eb87d41=
+">=20
+<td>=20
+<table role=3D"presentation" width=3D"100%" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" style=3D"min-width:100%;">=20
+<!--[if gte mso 9]>
+<tr>
+<td>
+<table role=3D"presentation" width=3D"600" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"width:600px;">
+<![endif]-->=20
+<tbody>=20
+<tr style=3D"white-space:nowrap; background-color:#ffffff;">=20
+<td class=3D"stack" style=3D"color:#8f9daa; text-align:left; font-family: A=
+rial, Helvetica, sans-serf; font-size:16px; line-height: 24px;white-space:n=
+ormal; background-color:#ffffff;padding-top:15px;padding-right: 25px;paddin=
+g-bottom:15px;padding-left: 25px;">=20
+<div class=3D"mktoText" id=3D"plainText0590d2c478-e532-49fa-a40f-b0237eb87d=
+41">
+ Can=E2=80=99t attend live? No problem =E2=80=94 you can watch recordings a=
+fter the event at your own pace. But first you have to=20
+<a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCXwS1OTRB6g8YBqkSlb9FhYJj=
+7zGaUNZRzaRrtrfVYyf9pnO0V1dKU1whCZc3ujP45o=3D" target=3D"_blank" id=3D""
+>register</a>.=20
+</div> </td>=20
+</tr>=20
+<!--[if gte mso 9]>
+</table>
+</td>
+</tr>
+<![endif]-->=20
+</tbody>=20
+</table> </td>=20
+</tr>
+<tr class=3D"mktoModule" id=3D"newFooter">=20
+<td>=20
+<table role=3D"presentation" width=3D"100%" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" style=3D"min-width:100%;">=20
+<!--[if gte mso 9]>
+<tr>
+<td>
+<table role=3D"presentation" width=3D"600" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" style=3D"width:600px;">
+<![endif]-->=20
+<tbody>=20
+<tr style=3D"white-space:nowrap; background-color:#0A2342">=20
+<td class=3D"stack" style=3D"white-space:normal; background-color:#0A2342; =
+padding-top:15px;padding-right: 25px;padding-bottom:15px;padding-left: 25px=
+;">=20
+<div class=3D"mktoSnippet" id=3D"footerContent20">=20
+<table role=3D"presentation" width=3D"100%" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" style=3D"min-width: 100%;">=20
+<tbody>=20
+<tr>=20
+<td>=20
+<!--Left-->=20
+<table role=3D"presentation" class=3D"tableStack" width=3D"28%" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" align=3D"left">=20
+<tbody>=20
+<tr>=20
+<td class=3D"center"><a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCVZFuxFThlYMitFw-ufiTt4Sj=
+1RAQbSe7NjUW5yMq533UO-CMTg3BeHKhGSVMugZtZI=3D"
+> <img src=3D"https://goto.docker.com/rs/929-FJL-178/images/docker_logo_lan=
+ding.png" width=3D"100" style=3D"display: block; max-width: 100px !importan=
+t;"> </a></td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+<!--Right-->=20
+<table role=3D"presentation" class=3D"tableStack insideTopPad" width=3D"68%=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"right">=20
+<tbody>=20
+<tr>=20
+<td class=3D"center" style=3D"text-align: right;">=20
+<table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" style=3D"display: inline-block;">=20
+<tbody>=20
+<tr>=20
+<td width=3D"40"><a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCWcQNsK4zuxLvCJzNE9e_YKAW=
+mdzlDPv-eNKZ-z1G1ZSo6XNcwKhcBn8Ix3PmAMog5E=3D"
+><img src=3D"https://goto.docker.com/rs/929-FJL-178/images/docker2018_Faceb=
+ook.png" style=3D"display: block; max-width: 24px !important;" width=3D"24"=
+ height=3D"24"></a></td>=20
+<td width=3D"40"><a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCf2mNxHpBWKyQCrIcc7QhUnV8=
+I8_p8KxU77rzXqSjDqDKDuxHnW1iZb7OlR8Rx9sHRQ=3D"
+><img src=3D"https://goto.docker.com/rs/929-FJL-178/images/docker2018_Twitt=
+er.png" style=3D"display: block; max-width: 24px !important;" width=3D"24" =
+height=3D"24"></a></td>=20
+<td width=3D"40"><a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCcyD_gVCenU-Ou_HyechBO7Y2=
+2Ifdw-HBQDhzesYELQ_GM7ZkvtTcdzXB_8KgkUVG7o=3D"
+><img src=3D"https://goto.docker.com/rs/929-FJL-178/images/docker2018_YouTu=
+be.png" style=3D"display: block; max-width: 24px !important;" width=3D"24" =
+height=3D"24"></a></td>=20
+<td width=3D"40"><a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCd7bIOTkR0XeflrNgJqSlbqsV=
+ujY-pktYIITvJ59wLByRUPsCo8YhPhFHzXtuvfWyk0=3D"
+><img src=3D"https://goto.docker.com/rs/929-FJL-178/images/docker2018_Linke=
+dIn.png" style=3D"display: block; max-width: 24px !important;" width=3D"24"=
+ height=3D"24"></a></td>=20
+<td width=3D"40"><a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCRNRC7pTU_flLBgRNkn-_wx_p=
+0ShC8YO_oryV8ddKSDlWnpO0DFDzXIBh98H7SNrewQ=3D" target=3D"_blank"
+><img src=3D"https://goto.docker.com/rs/929-FJL-178/images/docker2018_Blog.=
+png" style=3D"display: block; max-width: 24px !important;" width=3D"24" hei=
+ght=3D"24"></a></td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+</tbody>=20
+</table> </td>=20
+</tr>=20
+<tr>=20
+<td class=3D"center" style=3D"padding-top: 15px; color: #ffffff; text-align=
+: center; font-family: Arial, Helvetica, sans-serf; font-size: 12px; line-h=
+eight: 18px;"><a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCVZFuxFThlYMitFw-ufiTt4Sj=
+1RAQbSe7NjUW5yMq533UO-CMTg3BeHKhGSVMugZtZI=3D" style=3D"color: #ffffff; tex=
+t-decoration: none;"
+>=C2=A9 2021 Docker Inc. | </a><a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCXipXYI4QtTz30fkPH2crca9s=
+-OdbScW9DJdmlxx94eD6lxzb63558PRFJrbSUUkr_U=3D" style=3D"color: #ffffff; tex=
+t-decoration: none;"
+>Privacy Policy</a><br>This email was sent to <span style=3D"text-decoratio=
+n: underline; color: #ffffff;">497555805@qq.com</span> and you may<br><span=
+ style=3D"text-decoration: underline;"><a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCYynT_BhTXCYGQ5sXOiR6Qmai=
+BFTL8zBi_3IU5FH9uy6ZR8NSNFWuJBG-xv7GQCDFJY=3D" style=3D"color: #ffffff; tex=
+t-decoration: underline;"
+>update email preferences</a></span> or <span style=3D"text-decoration: und=
+erline;"><a href=3D"https://goto.docker.com/UnsubscribePage.html?mkt_unsubs=
+cribe=3D1&mkt_tok=3DOTI5LUZKTC0xNzgAAAF9I1PyCZfmO3R5OH6HS51vK7jPJ__loxTtPFL=
+nQ6MQz6vZUPd5zrpqX0e_KIVNBXzcKjFCQxxLydGlMV70jDtVA3g_PGCrmG8sewgTIlNX-5YUY2=
+8" style=3D"color: #ffffff; text-decoration: underline;">unsubscribe</a></s=
+pan> at any time.</td>=20
+</tr>=20
+</tbody>=20
+</table>=20
+</div> </td>=20
+</tr>=20
+<!--[if gte mso 9]>
+</table>
+</td>
+</tr>
+<![endif]-->=20
+</tbody>=20
+</table> </td>=20
+</tr>
+</table> </td>=20
+</tr>=20
+<!--/Container-->=20
+<!--Full Width Image for Gmail to render desktop version on mobile-->=20
+<tr>=20
+<td>=20
+<table role=3D"presentation" class=3D"hide" id=3D"gmailModule" width=3D"100=
+%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"min-width:100%=
+;">=20
+<tbody>
+<tr style=3D"white-space:nowrap; background-color:#ffffff">=20
+<td height=3D"1" class=3D"hide" style=3D"min-width:600px;opacity:0; font-si=
+ze:0px;line-height:0px;"> <img height=3D"1" src=3D"#" style=3D"min-width: 6=
+00px;max-height:0px; text-decoration: none; border: none; -ms-interpolation=
+-mode: bicubic;"> </td>=20
+</tr>=20
+</tbody>
+</table> </td>=20
+</tr>=20
+<!--/Full Width Image for Gmail to render desktop version on mobile-->=20
+</tbody>
+</table>=20
+<!--End Body Table--> </td>=20
+</tr>=20
+</tbody>
+</table> =20
+<a href=3D
+"https://email.docker.com/OTI5LUZKTC0xNzgAAAF9I1PyCamvHVPm_eRkhQyiT6le6cVto=
+D8GVtcqypZTGVjZZUy98UgsC3XIUyp8xnCsWKn5mE4=3D"
+></a>
+<img src=3D"https://email.docker.com/trk?t=3D1&mid=3DOTI5LUZKTC0xNzg6MDoxNT=
+YzMDo5NjY4OTo2NjE1Mjk6MTk1MjA6OTo4ODE0NzoxMDY5MTc5MDM6NDk3NTU1ODA1QHFxLmNvb=
+Q%3D%3D" width=3D"1" height=3D"1" style=3D"display:none !important;" alt=3D=
+"" />
+</body>
+</html>
+------=_Part_112576558_21546035.1621423243789--
+

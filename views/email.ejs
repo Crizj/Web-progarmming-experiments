@@ -1,0 +1,28 @@
+<%- include('header') %>
+<link rel="stylesheet" href="/css/login.css">
+<link rel="stylesheet" href="/css/articledetail.css">
+<script src="/js/ajax.js"></script>
+<%- include('nav') %>
+<div class="email-list padmar">
+    <div class="email-head">
+        <a class="from">
+            <h4><%= email.f %></h4>
+            <span><%= email.moment %></span>
+        </a>
+        <a class="reciever">
+            <span>收件人：<%= email.t %></span>
+        </a>
+        <% if(session.user){ %>
+        <a href="/<%= option %>?id=<%= email.id %>" class="delete"> <%= display %></a>
+        <% } %>
+
+    </div>
+    <h1 class="email-title"><%= email.title %></h1>
+    <section class="content-section">
+            <%- email.content %>
+    </section>
+
+</div>
+ 
+</body>
+</html>

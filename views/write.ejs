@@ -1,0 +1,92 @@
+<%- include("header") %>
+<link rel="stylesheet" href="/css/articles.css">
+<script src="./js/wangEditor.min.js"></script>
+<script src="./js/ajax.js"></script>
+<%- include('nav') %>
+<div class="editor1"></div>
+<div id="edit">
+    <span class="edit-tips">发送成功</span>
+    
+    <a href="javascript:;" class="sendemail">
+    <span class="glyphicon glyphicon-share-alt"></span>发送邮件
+    </a>
+</div>
+<div id="article">
+    
+    <input type="text" placeholder="收件人" name="to" class="email-to" style="border-top: darkgray, 1px; border-bottom: darkgray,1px ; border-left:none; border-right: none; width:700px; height:40px;" />
+    <br>
+    <input type="text" placeholder="邮件标题" name="title" class="email-title" style="border-top:none; border-bottom: darkgray,1px ; border-left:none; border-right: none; width:700px; height:40px;"/>
+    <div class="editor2"></div>
+</div>
+
+<script src="/js/mask.js"></script>
+<script>
+//配置编辑器
+var E = window.wangEditor
+var editor = new E('.editor1','.editor2')
+// 或者 var editor = new E( document.getElementById('editor') )
+// editor.customConfig.uploadImgShowBase64 = true   // 使用 base64 保存图片
+//editor.customConfig.uploadImgServer = '/upload'  // 上传图片到服务器
+// 将图片大小限制为 3M
+// editor.customConfig.uploadImgMaxSize = 3 * 1024 * 1024;
+// // 限制一次最多上传 5 张图片
+// editor.customConfig.uploadImgMaxLength = 5;
+editor.customConfig.pasteFilterStyle = true;
+editor.create();
+editor.txt.html('编辑邮件内容');
+
+// //统计字数
+// var num = document.getElementsByClassName('num')[0],
+//     editType = document.getElementById('derect'),
+//     editContent = document.getElementsByClassName('editor2')[0];
+//     editContent.onkeyup = function () {
+//         num.innerHTML = (editContent.innerHTML.length - 120) + '字';
+//     }
+//ajax上传文章
+var editorUp = document.getElementsByClassName('sendemail')[0],
+    editTitle = document.getElementsByClassName('email-title')[0],
+    editTips = document.getElementsByClassName('email-to')[0];
+
+    editorUp.onclick = function() {
+      //  console.log(editContent.innerHTML)
+        console.log(editor.txt.text())
+        let data = { "title": editTitle.value,"to": editTips.value,"content":editor.txt.html()};
+        // alert(editor.txt.text());
+        let data2 =  JSON.stringify(data);
+        // let data = "title=" + editTitle.value
+        //            + '&content=' + editor.txt.html()//editContent.innerHTML
+        //            + '&type=' + editType.value;  
+        // alert(data2);
+        ajax('post','/write',data2,'application/json');
+        xhr.onreadystatechange = function () {
+            if(xhr.readyState==4&&xhr.status>=200&&xhr.status<300){
+                let  text = xhr.responseText;    //服务器返回的对象
+                console.log(text)
+                if(text==1){
+                    mask('发送成功');
+                    setTimeout(()=>{
+                        window.location.href = '/';
+                    },1500);
+                  //  fadeout('发表成功');
+                    // editTips.innerHTML = '发表成功';
+                    // editTips.style.animation = 'fadeout 2s';
+                    //window.location.href = '/home';
+                }else{
+                    alert('发送或插入数据库失败!');
+                    // editTips.innerHTML = '发表失败';
+                    // editTips.style.animation = 'fadeout 2s';
+                }
+            }
+        }
+     
+    }
+    
+    function fadeout(text){
+        editTips.innerHTML = text;
+        editTips.style.opacity = 1;
+        setTimeout(()=>{
+            editTips.style.opacity = 0;
+        },1000)
+    }
+
+</script>

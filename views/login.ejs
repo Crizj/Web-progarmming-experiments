@@ -2,39 +2,43 @@
 <div class="sign">
     <a href="javascript:;" title="关闭" class="login-close close">×</a>
     <div class="sign-title">
-        <h1>用户注册</h1>
-        <h3>来吧骚年们!</h3>
+        <h1>连接邮箱</h1>
+        <h3>请输入邮箱配置</h3>
     </div>
     <form class="form signup" role="form">
-
-            <div class="form-group">
-                <input type="text" name="username" placeholder="账号不少于两个字符" class="form-control">
-            </div>
         <div class="form-group">
-            <input type="password" name="pass" class="pass form-control" placeholder="密码">
+            <input type="text" name="email" placeholder="邮箱地址" class="form-control">
         </div>
         <div class="form-group">
-            <input type="password" name="repeatpass" id="repeat" placeholder="重复密码" class="form-control">
+            <input type="password" name="pass" class="pass form-control" placeholder="邮箱授权码">
         </div>
-            <div class="form-group">
-            <input type="button" value="注册" class="btn btn-primary login-up">
-            </div>
+        <div class="form-group">
+            <input type="address" name="rec" placeholder="POP服务器" class="form-control">
+            <input type="recport" name="recport" placeholder="端口号" class="recport">
+        </div>
+        <div class="form-group">
+            <input type="address" name="send" placeholder="SMTP服务器" class="form-control">
+            <input type="sendport" name="sendport" placeholder="端口号" class="sendport">
+        </div>
+        <div class="form-group">
+            <input type="button" value="保存配置" class="btn btn-primary login-up">
+        </div>
 
     </form>
     <form class="form signin" role="form">
        <div class="form-group">
-           <input type="text" name="username" placeholder="请输入用户名" class="form-control">
+           <input type="text" name="email" placeholder="请输入邮箱地址" class="form-control">
        </div>
        <div class="form-group">
-           <input type="password" name="pass" class="pass form-control" placeholder="请输入密码">
+           <input type="password" name="pass" class="pass form-control" placeholder="请输入授权码">
        </div>
       <div class="form-group">
-          <input type="button" value="登录" class="btn btn-primary login-in">
+          <input type="button" value="连接到邮箱" class="btn btn-primary login-in">
       </div>
     </form>
     <div class="form-tips">
-        <span>已有账号？</span>
-        <a href="javascript:;" class="register">登录</a>
+        <span>已有配置？</span>
+        <a href="javascript:;" class="register">连接到已有配置</a>
     </div>
 </div>
 <div class="login-form-mask"></div>
@@ -53,21 +57,21 @@
             $signin = $('.signin');
 
         $register.click(function () {
-            if($span.html() == "已有账号？"){
+            if($span.html() == "已有配置？"){
 
                 $signin.css('display','block');
                 $signup.css('display','none');
-                $(this).html('注册');
-                $span.html("没有账号？");
-                $signTitle.html("欢迎登录");
+                $(this).html('建立新配置');
+                $span.html("没有配置？");
+                $signTitle.html("已有邮箱");
 
             }else{
 
                 $signin.css('display','none');
                 $signup.css('display','block');
-                $(this).html('登录');
-                $span.html("已有账号？");
-                $signTitle.html("欢迎注册");
+                $(this).html('已有配置');
+                $span.html("已有配置？");
+                $signTitle.html("新的邮箱");
             }
         })
 
@@ -110,7 +114,7 @@
     
     
     loginUp.onclick = function () { //注册
-        var data1 = 'username=' + signUp["username"].value + '&' + 'pass='+ signUp["pass"].value + '&' + 'repeatpass=' + signUp["repeatpass"].value;
+        var data1 = 'email=' + signUp["email"].value + '&' + 'pass='+ signUp["pass"].value + '&' + 'reciever=' + signUp["rec"].value+'&'+'recport='+signUp["recport"].value+'&'+'sender='+signUp["send"].value+'&'+'sendport='+signUp["sendport"].value;
         var  reg = /^[\u4E00-\u9FA5]{2,5}$/;
       /*  if(!reg.test(signUp["username"].value)){
             signUp["username"].classList.add("tips");
@@ -139,7 +143,7 @@
     }
 
     loginIn.onclick = function () { //登录
-        var data2 = 'username=' + signIn["username"].value + '&' + 'pass=' + signIn["pass"].value;
+        var data2 = 'email=' + signIn["email"].value + '&' + 'pass=' + signIn["pass"].value;
         ajax('post','/signin',data2,"application/x-www-form-urlencoded");
         xhr.onreadystatechange = function () {
             if(xhr.readyState==4&&xhr.status>=200&&xhr.status<300){
@@ -155,7 +159,7 @@
                     window.location.reload();
                 },1000)
                }else if(text === 2){
-                   alert('密码错误')
+                   alert('授权码错误')
                }else{
                    alert('账号不存在')
                }
